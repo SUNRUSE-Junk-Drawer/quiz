@@ -1,0 +1,11 @@
+node_modules
+host/**/*.js
+host/**/*.d.ts
+host/**/*.exe
+host/**/*.jpg
+host/**/*.mp3
+host/**/*.mp4
+host/**/*.csv
+dist
+.~*#
+host/aws/uploader/configuration.json

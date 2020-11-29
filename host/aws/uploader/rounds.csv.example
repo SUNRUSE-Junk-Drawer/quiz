@@ -1,0 +1,5 @@
+Round Title,Round Subtitle,Round Preamble,Round Music,Round Background,Question Title,Question Text,Question Media,Question Answer,Question Maximum Points
+Example Round A Title,Example Round A Subtitle,Example Round A Preamble,example-round-a-music.mp3,example-round-a-background.jpg,Example Question A Title,Example Question A Text,example-question-a-media.jpg,Example Question A Answer,2
+,,,,,Example Question B Title,Example Question B Text,,Example Question B Answer,1
+Example Round B Title,Example Round B Subtitle,Example Round B Preamble,,example-round-b-background.jpg,Example Question C Title,Example Question C Text,example-question-c-media.mp3,Example Question C Answer,1
+,,,,,Example Question D Title,Example Question D Text,example-question-d-media.mp4,Example Question D Answer,4

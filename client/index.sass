@@ -1,0 +1,95 @@
+*
+  font-family: inherit
+  background: none
+  color: inherit
+  font-size: inherit
+  padding: 0
+  margin: 0
+  border: none
+  outline: none
+  white-space: inherit
+  text-align: left
+  user-select: inherit
+  overflow: hidden
+
+html
+  color: #222
+  font-family: "Hi Melody", cursive
+  font-size: 0.6cm
+  white-space: pre
+  background: linear-gradient(to bottom, #ddf, #ffd)
+  min-width: 100%
+  min-height: 100%
+  user-select: none
+
+h1
+  position: fixed
+  top: 0.5cm
+  left: 50%
+  padding: 0.375cm 1cm 0.125cm 1cm
+  box-shadow: 0 0.125cm 0.375cm #0043
+  border-radius: 0.125cm
+  transform: translateX(-50%)
+  background: linear-gradient(to bottom, transparent 0cm, #ddf 0.02cm, transparent 0.04cm) 0.25cm 0.375cm repeat, linear-gradient(to bottom, #ffe, #eef)
+  background-size: 0.75cm 0.75cm, auto
+  font-size: 0.8cm
+  overflow: visible
+
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 50%
+    height: 2cm
+    width: 1cm
+    background: #aaa8
+    box-shadow: 0 0.1cm 0.15cm #0023
+    transform: translate(-50%, -50%) rotate(10deg)
+
+  &::after
+    content: ""
+    position: absolute
+    right: 0
+    top: 50%
+    height: 2cm
+    width: 1cm
+    background: #aaa8
+    box-shadow: 0 0.1cm 0.15cm #0023
+    transform: translate(50%, -50%) rotate(-8deg)
+
+.message
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background: linear-gradient(to bottom, transparent 0cm, #ddf 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, #ffe, #eef)
+  background-size: 0.75cm 0.75cm, auto
+  line-height: 0.75cm
+  padding: 1.125cm 0.375cm 1cm 0.375cm
+  box-shadow: 0 0.125cm 0.375cm #0043
+  border-radius: 0.125cm
+  max-width: calc(100vw - 2cm)
+  max-height: calc(100vh - 2cm)
+  overflow: visible
+
+  &::before
+    content: ""
+    position: absolute
+    left: 50%
+    top: 0
+    width: 2cm
+    height: 1cm
+    background: #aaa8
+    box-shadow: 0 0.1cm 0.15cm #0023
+    transform: translate(-50%, -50%) rotate(6deg)
+
+  &::after
+    content: ""
+    position: absolute
+    left: 50%
+    bottom: 0
+    width: 2cm
+    height: 1cm
+    background: #aaa8
+    box-shadow: 0 0.1cm 0.15cm #0023
+    transform: translate(-50%, 50%) rotate(-5deg)

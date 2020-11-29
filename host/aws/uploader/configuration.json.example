@@ -1,0 +1,41 @@
+{
+  "credentials": {
+    "accessKey": "YOURACCESSKEY",
+    "secretKey": "YOURSECRETKEY"
+  },
+  "mediaS3FileStore": {
+    "bucketName": "your-bucket-name"
+  },
+  "quizzesDynamodbKeyValueStore": {
+    "tableName": "your-table-name",
+    "keyAttributeName": "key",
+    "valueAttributeName": "value",
+    "versionAttributeName": "version",
+    "billing": {
+      "type": "payPerRequest"
+    },
+    "encryption": {
+      "type": "none"
+    },
+    "tags": {},
+    "clientConfiguration": {
+      "region": "your-region"
+    }
+  },
+  "instancesDynamodbKeyValueStore": {
+    "tableName": "your-table-name",
+    "keyAttributeName": "key",
+    "valueAttributeName": "value",
+    "versionAttributeName": "version",
+    "billing": {
+      "type": "payPerRequest"
+    },
+    "encryption": {
+      "type": "none"
+    },
+    "tags": {},
+    "clientConfiguration": {
+      "region": "your-region"
+    }
+  }
+}

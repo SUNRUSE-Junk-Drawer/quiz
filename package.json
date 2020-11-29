@@ -13,10 +13,13 @@
   "license": "MIT",
   "devDependencies": {
     "7zip-bin": "5.0.3",
+    "@endless-trash/event-handler": "0.0.3",
     "@endless-trash/file-store": "0.0.5",
     "@endless-trash/immutable-json-type": "0.0.1",
     "@endless-trash/key-value-store": "0.0.5",
     "@endless-trash/prompt": "0.0.6",
+    "@endless-trash/websocket-host": "0.0.1",
+    "@types/aws-lambda": "8.10.64",
     "@types/uuid": "8.3.0",
     "@types/xml2js": "0.4.7",
     "@typescript-eslint/eslint-plugin": "4.6.0",
@@ -57,6 +60,7 @@
     "buildHostAwsUploaderNexeZip": "node host/aws/uploader/zip"
   },
   "dependencies": {
+    "@endless-trash/api-gateway-lambda-websocket-host": "0.0.2",
     "@endless-trash/dom-prompt-client": "0.0.2",
     "@endless-trash/dynamodb-key-value-store": "0.0.2",
     "@endless-trash/json-websocket-channel": "0.0.2",

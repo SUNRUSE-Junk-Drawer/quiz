@@ -16,4 +16,5 @@ jobs:
     - run: npm ci
     - run: npm run-script build
     - run: aws s3 sync dist s3://www.sunruse.co.uk/quiz --acl public-read
+      if: github.ref == 'refs/heads/master'
     # todo push to Lambda

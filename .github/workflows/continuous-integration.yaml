@@ -1,14 +1,16 @@
 name: Continuous Integration
 on: [push, pull_request]
-runs-on: ubuntu-18.04
-steps:
-- uses: actions/checkout@v2
-- uses: actions/setup-node@v1
-  with:
-    node-version: '10.x'
-    registry-url: 'https://registry.npmjs.org'
-- run: npm ci
-- run: npm run-script buildLint
-- run: npm run-script buildTargets
-# todo push to s3
-# todo push to Lambda
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
+    - run: npm ci
+    - run: npm run-script buildLint
+    - run: npm run-script buildTargets
+    # todo push to s3
+    # todo push to Lambda

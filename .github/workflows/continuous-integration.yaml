@@ -3,6 +3,10 @@ on: [push, pull_request]
 jobs:
   continuous-integration:
     runs-on: ubuntu-18.04
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: eu-west-1
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
@@ -11,5 +15,6 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
     - run: npm run-script build
-    # todo push to s3
+    - run: aws configure
+    - run: aws s3 sync dist s3://www.sunruse.co.uk/quiz --acl public-read
     # todo push to Lambda

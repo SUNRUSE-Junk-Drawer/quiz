@@ -10,7 +10,6 @@ jobs:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - run: npm run-script buildLint
-    - run: npm run-script buildTargets
+    - run: npm run-script build
     # todo push to s3
     # todo push to Lambda

@@ -50,7 +50,7 @@
     "buildSharedLint": "eslint \"**/*.ts\"",
     "buildSharedLintFix": "eslint --fix \"**/*.ts\"",
     "buildTargets": "npm-run-all buildClient buildHost",
-    "buildClient": "webpack",
+    "buildClient": "webpack --config client/webpack.config.ts",
     "buildHost": "npm-run-all buildHostClean buildHostTypeScript buildHostTargets",
     "buildHostClean": "del-cli \"host/**/*.js\" \"host/**/*.d.ts\" \"host/**/*.exe\" \"dist/uploader.zip\"",
     "buildHostTypeScript": "tsc",

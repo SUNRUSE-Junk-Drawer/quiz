@@ -29,6 +29,7 @@ module.exports = {
   output: {
     filename: `index.js`,
     path: resolve(`host`, `aws`, `server`, `event-handler`, `dist`),
+    libraryTarget: `commonjs`,
   },
   externals: {
     "aws-sdk": "commonjs2 aws-sdk",

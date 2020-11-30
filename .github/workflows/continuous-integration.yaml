@@ -21,3 +21,4 @@ jobs:
     - run: aws s3 sync dist s3://www.sunruse.co.uk/quiz --acl public-read --exclude "*" --include "index.html"
       if: github.ref == 'refs/heads/master'
     - run: aws lambda update-function-code --function-name sunruse-quiz --zip-file host/aws/server/event-handler/dist/index.zip
+      if: github.ref == 'refs/heads/master'

@@ -4,7 +4,7 @@ import { path7za } from "7zip-bin";
 import { cli } from "../cli";
 
 cli(async () => {
-  await new Promise((resolve, reject) => {
+  await new Promise<void>((resolve, reject) => {
     execFile(
       path7za,
       [

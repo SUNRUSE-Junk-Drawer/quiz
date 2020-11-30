@@ -68,7 +68,6 @@
     ]
   },
   "exclude": [
-    "client",
-    "webpack.config.ts"
+    "client"
   ]
 }

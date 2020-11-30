@@ -11,7 +11,7 @@
     "jsx": "react",
     "jsxFactory": "h",
     "listFiles": false,
-    "module": "none",
+    "module": "CommonJS",
     "newLine": "LF",
     "noEmit": false,
     "noEmitHelpers": false,
@@ -34,7 +34,7 @@
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false,
     "stripInternal": true,
-    "target": "ES2018",
+    "target": "ES5",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
@@ -63,12 +63,11 @@
     "declarationMap": false,
     "resolveJsonModule": false,
     "lib": [
-      "ES2019",
+      "ES5",
       "DOM"
     ]
   },
   "exclude": [
-    "client",
-    "host/aws/server/event-handler"
+    "webpack.config.ts"
   ]
 }

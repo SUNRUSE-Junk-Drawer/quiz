@@ -9,3 +9,4 @@ host/**/*.csv
 dist
 .~*#
 host/aws/uploader/configuration.json
+host/aws/server/event-handler/dist

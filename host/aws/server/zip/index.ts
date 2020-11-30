@@ -7,19 +7,9 @@ cli(async () => {
   await new Promise<void>((resolve, reject) => {
     execFile(
       path7za,
-      [
-        `a`,
-        `-mm=Deflate`,
-        `-mfb=258`,
-        `-mpass=15`,
-        join(`..`, `..`, `..`, `dist`, `uploader.zip`),
-        `sunruse-quiz-uploader.exe`,
-        `configuration.json.example`,
-        `players.csv.example`,
-        `rounds.csv.example`,
-      ],
+      [`a`, `-mm=Deflate`, `-mfb=258`, `-mpass=15`, join(`index.zip`), `*`],
       {
-        cwd: join(`host`, `aws`, `uploader`),
+        cwd: join(`host`, `aws`, `server`, `event-handler`, `dist`),
       }
     )
       .on(`error`, reject)

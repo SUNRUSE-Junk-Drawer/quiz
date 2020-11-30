@@ -21,6 +21,7 @@
     "host/**/*.d.ts": true,
     "host/**/*.exe": true,
     "dist": true,
+    "host/aws/server/event-handler/dist": true,
     "**/.~*.*#": true,
   }
 }

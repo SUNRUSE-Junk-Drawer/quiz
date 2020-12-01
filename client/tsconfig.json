@@ -2,7 +2,7 @@
   "compilerOptions": {
     "charset": "utf8",
     "composite": false,
-    "declaration": true,
+    "declaration": false,
     "diagnostics": false,
     "emitBOM": false,
     "incremental": false,

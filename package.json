@@ -13,6 +13,8 @@
   "license": "MIT",
   "devDependencies": {
     "7zip-bin": "5.0.3",
+    "@babel/core": "7.12.9",
+    "@babel/preset-env": "7.12.7",
     "@endless-trash/event-handler": "0.0.3",
     "@endless-trash/file-store": "0.0.5",
     "@endless-trash/immutable-json-type": "0.0.1",
@@ -24,6 +26,7 @@
     "@types/xml2js": "0.4.7",
     "@typescript-eslint/eslint-plugin": "4.9.0",
     "@typescript-eslint/parser": "4.9.0",
+    "babel-loader": "8.2.2",
     "css-loader": "5.0.1",
     "del-cli": "3.0.1",
     "eslint": "7.14.0",
@@ -69,7 +72,9 @@
     "@endless-trash/json-websocket-channel": "0.0.2",
     "@endless-trash/s3-file-store": "0.0.1",
     "aws-sdk": "2.800.0",
+    "core-js": "3.8.0",
     "pug": "3.0.0",
+    "regenerator-runtime": "0.13.7",
     "uuid": "8.3.1",
     "xml2js": "0.4.23"
   }

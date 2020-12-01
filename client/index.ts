@@ -1,3 +1,5 @@
+import "regenerator-runtime";
+import "core-js/es/promise";
 import "./index.sass";
 import { jsonWebsocketChannel } from "@endless-trash/json-websocket-channel";
 import { domPromptClient } from "@endless-trash/dom-prompt-client";

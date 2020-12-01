@@ -11,6 +11,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const version = execSync(`git rev-parse HEAD`, { encoding: `utf8` });
 
 module.exports = {
+  target: [`web`, `es5`],
   entry: resolve(`client`, `index.ts`),
   module: {
     rules: [
@@ -23,6 +24,24 @@ module.exports = {
           },
         },
         exclude: /node_modules/,
+      },
+      {
+        test: /\.jsx?$/,
+        use: {
+          loader: `babel-loader`,
+          options: {
+            presets: [
+              [
+                `@babel/preset-env`,
+                {
+                  useBuiltIns: `entry`,
+                  corejs: 3,
+                  targets: { browsers: [`IE 11`] },
+                },
+              ],
+            ],
+          },
+        },
       },
       {
         test: /\.sass$/,

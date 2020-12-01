@@ -17,29 +17,31 @@
   appearance: none
   -moz-appearance: none
   -webkit-appearance: none
+  -ms-user-select: none
 
 html
-  color: #222
+  color: rgb(34, 34, 34)
   font-family: "Hi Melody", cursive
   font-size: 0.6cm
   white-space: pre
-  background: linear-gradient(to bottom, #ddf, #ffd)
+  background: linear-gradient(to bottom, rgb(221, 221, 255), rgb(255, 255, 221))
   min-width: 100%
   min-height: 100%
   user-select: none
 
 .field input
   width: 100%
+  -ms-user-select: text
 
 h1
   position: fixed
   top: 0.5cm
   left: 50%
   padding: 0.375cm 1cm 0.125cm 1cm
-  box-shadow: 0 0.125cm 0.375cm #0043
+  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
   border-radius: 0.125cm
   transform: translateX(-50%)
-  background: linear-gradient(to bottom, transparent 0cm, #ddf 0.02cm, transparent 0.04cm) 0.25cm 0.375cm repeat, linear-gradient(to bottom, #ffe, #eef)
+  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.375cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
   background-size: 0.75cm 0.75cm, auto
   font-size: 0.8cm
   overflow: visible
@@ -51,8 +53,8 @@ h1
     top: 50%
     height: 2cm
     width: 1cm
-    background: #aaa8
-    box-shadow: 0 0.1cm 0.15cm #0023
+    background: rgba(170, 170, 170, 0.53)
+    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, -50%) rotate(10deg)
 
   &::after
@@ -62,8 +64,8 @@ h1
     top: 50%
     height: 2cm
     width: 1cm
-    background: #aaa8
-    box-shadow: 0 0.1cm 0.15cm #0023
+    background: rgba(170, 170, 170, 0.53)
+    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(50%, -50%) rotate(-8deg)
 
 .message
@@ -71,11 +73,11 @@ h1
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
-  background: linear-gradient(to bottom, transparent 0cm, #ddf 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, #ffe, #eef)
+  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
   background-size: 0.75cm 0.75cm, auto
   line-height: 0.75cm
   padding: 1.125cm 0.375cm 1cm 0.375cm
-  box-shadow: 0 0.125cm 0.375cm #0043
+  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
   border-radius: 0.125cm
   max-width: calc(100vw - 2cm)
   max-height: calc(100vh - 2cm)
@@ -88,8 +90,8 @@ h1
     top: 0
     width: 2cm
     height: 1cm
-    background: #aaa8
-    box-shadow: 0 0.1cm 0.15cm #0023
+    background: rgba(170, 170, 170, 0.53)
+    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, -50%) rotate(6deg)
 
   &::after
@@ -99,8 +101,8 @@ h1
     bottom: 0
     width: 2cm
     height: 1cm
-    background: #aaa8
-    box-shadow: 0 0.1cm 0.15cm #0023
+    background: rgba(170, 170, 170, 0.53)
+    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, 50%) rotate(-5deg)
 
 .form
@@ -108,11 +110,11 @@ h1
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
-  background: linear-gradient(to bottom, transparent 0cm, #ddf 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, #ffe, #eef)
+  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
   background-size: 0.75cm 0.75cm, auto
   line-height: 0.75cm
   padding: 1.125cm 0.375cm 1cm 0.375cm
-  box-shadow: 0 0.125cm 0.375cm #0043
+  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
   border-radius: 0.125cm
   max-width: calc(100vw - 2cm)
   max-height: calc(100vh - 2cm)
@@ -125,8 +127,8 @@ h1
     top: 0
     width: 2cm
     height: 1cm
-    background: #aaa8
-    box-shadow: 0 0.1cm 0.15cm #0023
+    background: rgba(170, 170, 170, 0.53)
+    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, -50%) rotate(6deg)
 
   &::after
@@ -136,14 +138,14 @@ h1
     bottom: 0
     width: 2cm
     height: 1cm
-    background: #aaa8
-    box-shadow: 0 0.1cm 0.15cm #0023
+    background: rgba(170, 170, 170, 0.53)
+    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, 50%) rotate(-5deg)
 
 label
-  color: #003A
+  color: rgba(0, 0, 68, 0.66)
   display: block
-  border-bottom: 0.05cm solid #0038
+  border-bottom: 0.05cm solid rgba(0, 0, 68, 0.53)
   padding-top: 0.05cm
   line-height: 0.65cm
   position: relative
@@ -155,7 +157,7 @@ label
     right: 0
     bottom: 0
     height: 0.025cm
-    background: #003B
+    background: rgba(0, 0, 68, 0.73)
     transform: rotate(0.8deg)
   &::after
     content: ""
@@ -164,7 +166,7 @@ label
     right: 0
     bottom: 0
     height: 0.025cm
-    background: #0039
+    background: rgba(0, 0, 68, 0.6)
     transform: rotate(-0.6deg)
 
 .field
@@ -183,10 +185,10 @@ label
   border: solid
   border-width: 0.05cm 0.06cm 0.07cm 0.08cm
   border-radius: 0.2cm 0.19cm 0.22cm 0.1cm
-  border-color: #003A #0038 #0037 #0038
+  border-color: rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.53) rgba(0, 0, 68, 0.46) rgba(0, 0, 68, 0.53)
 
   font-weight: bold
-  color: #003A
+  color: rgba(0, 0, 68, 0.66)
 
   cursor: pointer
 
@@ -200,7 +202,7 @@ label
     border: solid
     border-width: 0.085cm 0.065cm 0.075cm 0.055cm
     border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
-    border-color: #0039 #003B #0037 #0039
+    border-color: rgba(0, 0, 68, 0.6) rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.46) rgba(0, 0, 68, 0.6)
     transform: rotate(-0.6deg)
 
   &::after
@@ -213,23 +215,23 @@ label
     border: solid black
     border-width: 0.085cm 0.065cm 0.075cm 0.055cm
     border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
-    border-color: #003B #0038 #003A #0038
+    border-color: rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.53) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.53)
     transform: rotate(0.4deg)
 
   &:hover
-    color: #003C
-    border-color: #003C #003A #0039 #003A
-    transform: scale(101%)
+    color: rgba(0, 0, 68, 0.8)
+    border-color: rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.6) rgba(0, 0, 68, 0.66)
+    transform: scale(1.01)
     &::before
-      border-color: #003B #003D #0038 #003B
+      border-color: rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.86) rgba(0, 0, 68, 0.53) rgba(0, 0, 68, 0.73)
     &::after
-      border-color: #003D #003A #003C #003A
+      border-color: rgba(0, 0, 68, 0.86) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.66)
 
   &:active
-    color: #003
-    border-color: #003E #003C #003B #003C
-    transform: scale(99%)
+    color: rgb(0, 0, 68)
+    border-color: rgba(0, 0, 68, 0.93) rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.8)
+    transform: scale(0.99)
     &::before
-      border-color: #003D #003F #003A #003D
+      border-color: rgba(0, 0, 68, 0.86) rgb(0, 0, 68) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.86)
     &::after
-      border-color: #003F #003C #003E #003C
+      border-color: rgb(0, 0, 68) rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.93) rgba(0, 0, 68, 0.8)

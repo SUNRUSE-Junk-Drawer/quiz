@@ -52,8 +52,8 @@ export const eventHandler: EventHandler<
               },
               {
                 type: `float`,
-                name: `Test Integer Field`,
-                label: `Test Integer Label`,
+                name: `Test Float Field`,
+                label: `Test Float Label`,
                 minimum: [5, `inclusive`],
                 maximum: [20, `inclusive`],
                 value: null,

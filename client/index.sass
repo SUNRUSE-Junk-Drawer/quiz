@@ -10,7 +10,13 @@
   white-space: inherit
   text-align: left
   user-select: inherit
-  overflow: hidden
+  overflow: visible
+  text-decoration: inherit
+  font-weight: inherit
+  box-shadow: none
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
 
 html
   color: #222
@@ -21,6 +27,9 @@ html
   min-width: 100%
   min-height: 100%
   user-select: none
+
+.field input
+  width: 100%
 
 h1
   position: fixed
@@ -93,3 +102,134 @@ h1
     background: #aaa8
     box-shadow: 0 0.1cm 0.15cm #0023
     transform: translate(-50%, 50%) rotate(-5deg)
+
+.form
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background: linear-gradient(to bottom, transparent 0cm, #ddf 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, #ffe, #eef)
+  background-size: 0.75cm 0.75cm, auto
+  line-height: 0.75cm
+  padding: 1.125cm 0.375cm 1cm 0.375cm
+  box-shadow: 0 0.125cm 0.375cm #0043
+  border-radius: 0.125cm
+  max-width: calc(100vw - 2cm)
+  max-height: calc(100vh - 2cm)
+  overflow: visible
+
+  &::before
+    content: ""
+    position: absolute
+    left: 50%
+    top: 0
+    width: 2cm
+    height: 1cm
+    background: #aaa8
+    box-shadow: 0 0.1cm 0.15cm #0023
+    transform: translate(-50%, -50%) rotate(6deg)
+
+  &::after
+    content: ""
+    position: absolute
+    left: 50%
+    bottom: 0
+    width: 2cm
+    height: 1cm
+    background: #aaa8
+    box-shadow: 0 0.1cm 0.15cm #0023
+    transform: translate(-50%, 50%) rotate(-5deg)
+
+label
+  color: #003A
+  display: block
+  border-bottom: 0.05cm solid #0038
+  padding-top: 0.05cm
+  line-height: 0.65cm
+  position: relative
+  overflow: visible
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 0.025cm
+    background: #003B
+    transform: rotate(0.8deg)
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 0.025cm
+    background: #0039
+    transform: rotate(-0.6deg)
+
+.field
+  margin-bottom: 0.75cm
+
+.field::last-child
+  margin-bottom: 0
+
+.submit-button
+  text-align: center
+  position: relative
+  width: 100%
+  padding: 0.3cm 1.29cm 0.28cm 1.27cm
+  margin-top: -0.0625cm
+
+  border: solid
+  border-width: 0.05cm 0.06cm 0.07cm 0.08cm
+  border-radius: 0.2cm 0.19cm 0.22cm 0.1cm
+  border-color: #003A #0038 #0037 #0038
+
+  font-weight: bold
+  color: #003A
+
+  cursor: pointer
+
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    border: solid
+    border-width: 0.085cm 0.065cm 0.075cm 0.055cm
+    border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
+    border-color: #0039 #003B #0037 #0039
+    transform: rotate(-0.6deg)
+
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    border: solid black
+    border-width: 0.085cm 0.065cm 0.075cm 0.055cm
+    border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
+    border-color: #003B #0038 #003A #0038
+    transform: rotate(0.4deg)
+
+  &:hover
+    color: #003C
+    border-color: #003C #003A #0039 #003A
+    transform: scale(101%)
+    &::before
+      border-color: #003B #003D #0038 #003B
+    &::after
+      border-color: #003D #003A #003C #003A
+
+  &:active
+    color: #003
+    border-color: #003E #003C #003B #003C
+    transform: scale(99%)
+    &::before
+      border-color: #003D #003F #003A #003D
+    &::after
+      border-color: #003F #003C #003E #003C

@@ -69,7 +69,7 @@
     "@endless-trash/api-gateway-lambda-websocket-host": "0.0.2",
     "@endless-trash/dom-prompt-client": "0.0.8",
     "@endless-trash/dynamodb-key-value-store": "0.0.2",
-    "@endless-trash/json-websocket-channel": "0.0.2",
+    "@endless-trash/json-websocket-channel": "0.0.3",
     "@endless-trash/s3-file-store": "0.0.1",
     "aws-sdk": "2.804.0",
     "core-js": "3.8.0",

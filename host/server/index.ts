@@ -1,10 +1,13 @@
 import { EventHandler } from "@endless-trash/event-handler";
 import { Prompt } from "@endless-trash/prompt";
-import { WebsocketHostOutput } from "@endless-trash/websocket-host";
+import {
+  WebsocketHostInput,
+  WebsocketHostOutput,
+} from "@endless-trash/websocket-host";
 import { EventHandlerInput } from "./event-handler-input";
 
 export const eventHandler: EventHandler<
-  EventHandlerInput,
+  WebsocketHostInput & EventHandlerInput,
   WebsocketHostOutput
 > = async (event) => {
   const videoUrl = await event.media.getUrl(

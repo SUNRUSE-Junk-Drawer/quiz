@@ -42,18 +42,27 @@ html
   background: rgba(170, 170, 170, 0.53)
   box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
 
+@mixin lined-paper
+  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
+  border-radius: 0.125cm
+  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.375cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
+  background-size: 0.75cm 0.75cm, auto
+  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
+
+@mixin lined-paper-with-content
+  line-height: 0.75cm
+  padding: 1.125cm 0.375cm 1cm 0.375cm
+  @include lined-paper
+
 body > h1
   position: fixed
   top: 0.5cm
   left: 50%
   padding: 0.375cm 1cm 0.125cm 1cm
-  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
-  border-radius: 0.125cm
   transform: translateX(-50%)
-  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.375cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
-  background-size: 0.75cm 0.75cm, auto
   font-size: 0.8cm
   overflow: visible
+  @include lined-paper
 
   &::before
     content: ""
@@ -80,15 +89,10 @@ body > h1
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
-  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
-  background-size: 0.75cm 0.75cm, auto
-  line-height: 0.75cm
-  padding: 1.125cm 0.375cm 1cm 0.375cm
-  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
-  border-radius: 0.125cm
   max-width: calc(100vw - 2cm)
   max-height: calc(100vh - 2cm)
   overflow: visible
+  @include lined-paper-with-content
 
   &::before
     content: ""
@@ -115,15 +119,10 @@ body > h1
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
-  background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.25cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
-  background-size: 0.75cm 0.75cm, auto
-  line-height: 0.75cm
-  padding: 1.125cm 0.375cm 1cm 0.375cm
-  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
-  border-radius: 0.125cm
   max-width: calc(100vw - 2cm)
   max-height: calc(100vh - 2cm)
   overflow: visible
+  @include lined-paper-with-content
 
   &::before
     content: ""

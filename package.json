@@ -19,7 +19,7 @@
     "@endless-trash/file-store": "0.0.5",
     "@endless-trash/immutable-json-type": "0.0.1",
     "@endless-trash/key-value-store": "0.0.5",
-    "@endless-trash/prompt": "0.0.7",
+    "@endless-trash/prompt": "0.0.8",
     "@endless-trash/websocket-host": "0.0.1",
     "@types/aws-lambda": "8.10.64",
     "@types/uuid": "8.3.0",

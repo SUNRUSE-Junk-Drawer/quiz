@@ -38,6 +38,10 @@ html
   -ms-user-select: text
   user-select: text
 
+@mixin tape
+  background: rgba(170, 170, 170, 0.53)
+  box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
+
 body > h1
   position: fixed
   top: 0.5cm
@@ -58,9 +62,8 @@ body > h1
     top: 50%
     height: 2cm
     width: 1cm
-    background: rgba(170, 170, 170, 0.53)
-    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, -50%) rotate(10deg)
+    @include tape
 
   &::after
     content: ""
@@ -69,9 +72,8 @@ body > h1
     top: 50%
     height: 2cm
     width: 1cm
-    background: rgba(170, 170, 170, 0.53)
-    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(50%, -50%) rotate(-8deg)
+    @include tape
 
 .message
   position: fixed
@@ -95,9 +97,8 @@ body > h1
     top: 0
     width: 2cm
     height: 1cm
-    background: rgba(170, 170, 170, 0.53)
-    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, -50%) rotate(6deg)
+    @include tape
 
   &::after
     content: ""
@@ -106,9 +107,8 @@ body > h1
     bottom: 0
     width: 2cm
     height: 1cm
-    background: rgba(170, 170, 170, 0.53)
-    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, 50%) rotate(-5deg)
+    @include tape
 
 .form
   position: fixed
@@ -132,9 +132,8 @@ body > h1
     top: 0
     width: 2cm
     height: 1cm
-    background: rgba(170, 170, 170, 0.53)
-    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, -50%) rotate(6deg)
+    @include tape
 
   &::after
     content: ""
@@ -143,9 +142,8 @@ body > h1
     bottom: 0
     width: 2cm
     height: 1cm
-    background: rgba(170, 170, 170, 0.53)
-    box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
     transform: translate(-50%, 50%) rotate(-5deg)
+    @include tape
 
 label
   color: rgba(0, 0, 68, 0.66)

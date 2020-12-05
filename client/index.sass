@@ -38,16 +38,19 @@ html
   -ms-user-select: text
   user-select: text
 
+@function ink($opacity)
+  @return rgba(0, 0, 68, $opacity)
+
 @mixin tape
   background: rgba(170, 170, 170, 0.53)
   box-shadow: 0 0.1cm 0.15cm rgba(0, 0, 0.13, 0.2)
 
 @mixin lined-paper
-  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
+  box-shadow: 0 0.125cm 0.375cm ink(0.2)
   border-radius: 0.125cm
   background: linear-gradient(to bottom, transparent 0cm, rgb(221, 221, 255) 0.02cm, transparent 0.04cm) 0.25cm 0.375cm repeat, linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
   background-size: 0.75cm 0.75cm, auto
-  box-shadow: 0 0.125cm 0.375cm rgba(0, 0, 68, 0.2)
+  box-shadow: 0 0.125cm 0.375cm ink(0.2)
 
 @mixin lined-paper-with-content
   line-height: 0.75cm
@@ -145,9 +148,9 @@ body > h1
     @include tape
 
 label
-  color: rgba(0, 0, 68, 0.66)
+  color: ink(0.66)
   display: block
-  border-bottom: 0.05cm solid rgba(0, 0, 68, 0.53)
+  border-bottom: 0.05cm solid ink(0.53)
   padding-top: 0.05cm
   line-height: 0.65cm
   position: relative
@@ -159,7 +162,7 @@ label
     right: 0
     bottom: 0
     height: 0.025cm
-    background: rgba(0, 0, 68, 0.73)
+    background: ink(0.73)
     transform: rotate(0.8deg)
   &::after
     content: ""
@@ -168,7 +171,7 @@ label
     right: 0
     bottom: 0
     height: 0.025cm
-    background: rgba(0, 0, 68, 0.6)
+    background: ink(0.6)
     transform: rotate(-0.6deg)
 
 .invalid.field label
@@ -195,10 +198,10 @@ label
   border: solid
   border-width: 0.05cm 0.06cm 0.07cm 0.08cm
   border-radius: 0.2cm 0.19cm 0.22cm 0.1cm
-  border-color: rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.53) rgba(0, 0, 68, 0.46) rgba(0, 0, 68, 0.53)
+  border-color: ink(0.66) ink(0.53) ink(0.46) ink(0.53)
 
   font-weight: bold
-  color: rgba(0, 0, 68, 0.66)
+  color: ink(0.66)
 
   cursor: pointer
 
@@ -212,7 +215,7 @@ label
     border: solid
     border-width: 0.085cm 0.065cm 0.075cm 0.055cm
     border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
-    border-color: rgba(0, 0, 68, 0.6) rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.46) rgba(0, 0, 68, 0.6)
+    border-color: ink(0.6) ink(0.73) ink(0.46) ink(0.6)
     transform: rotate(-0.6deg)
 
   &::after
@@ -225,32 +228,32 @@ label
     border: solid black
     border-width: 0.085cm 0.065cm 0.075cm 0.055cm
     border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
-    border-color: rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.53) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.53)
+    border-color: ink(0.73) ink(0.53) ink(0.66) ink(0.53)
     transform: rotate(0.4deg)
 
   &:not(:disabled):hover
-    color: rgba(0, 0, 68, 0.8)
-    border-color: rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.6) rgba(0, 0, 68, 0.66)
+    color: ink(0.8)
+    border-color: ink(0.8) ink(0.66) ink(0.6) ink(0.66)
     transform: scale(1.01)
     &::before
-      border-color: rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.86) rgba(0, 0, 68, 0.53) rgba(0, 0, 68, 0.73)
+      border-color: ink(0.73) ink(0.86) ink(0.53) ink(0.73)
     &::after
-      border-color: rgba(0, 0, 68, 0.86) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.66)
+      border-color: ink(0.86) ink(0.66) ink(0.8) ink(0.66)
 
   &:not(:disabled):active
-    color: rgb(0, 0, 68)
-    border-color: rgba(0, 0, 68, 0.93) rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.73) rgba(0, 0, 68, 0.8)
+    color: ink(1)
+    border-color: ink(0.93) ink(0.8) ink(0.73) ink(0.8)
     transform: scale(0.99)
     &::before
-      border-color: rgba(0, 0, 68, 0.86) rgb(0, 0, 68) rgba(0, 0, 68, 0.66) rgba(0, 0, 68, 0.86)
+      border-color: ink(0.86) ink(1) ink(0.66) ink(0.86)
     &::after
-      border-color: rgb(0, 0, 68) rgba(0, 0, 68, 0.8) rgba(0, 0, 68, 0.93) rgba(0, 0, 68, 0.8)
+      border-color: ink(1) ink(0.8) ink(0.93) ink(0.8)
 
   &:disabled
     cursor: not-allowed
-    color: rgba(0, 0, 68, 0.3)
-    border-color: rgba(0, 0, 68, 0.1) rgba(0, 0, 68, 0.16) rgba(0, 0, 68, 0.08) rgba(0, 0, 68, 0.11)
+    color: ink(0.3)
+    border-color: ink(0.1) ink(0.16) ink(0.08) ink(0.11)
     &::before
-      border-color: rgba(0, 0, 68, 0.12) rgba(0, 0, 68, 0.095) rgba(0, 0, 68, 0.06) rgba(0, 0, 68, 0.14)
+      border-color: ink(0.12) ink(0.095) ink(0.06) ink(0.14)
     &::after
-      border-color: rgba(0, 0, 0, 0.11) rgba(0, 0, 68, 0.11) rgba(0, 0, 68, 0.12) rgba(0, 0, 68, 0.12)
+      border-color: ink(0.11) ink(0.11) ink(0.12) ink(0.12)

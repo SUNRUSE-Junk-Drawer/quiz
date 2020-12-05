@@ -188,6 +188,9 @@ label
 .field::last-child
   margin-bottom: 0
 
+@mixin ink-border($opacity-a, $opacity-b, $opacity-c, $opacity-d)
+  border-color: ink($opacity-a) ink($opacity-b) ink($opacity-c) ink($opacity-d)
+
 .submit-button
   text-align: center
   position: relative
@@ -195,15 +198,15 @@ label
   padding: 0.3cm 1.29cm 0.28cm 1.27cm
   margin-top: -0.0625cm
 
-  border: solid
-  border-width: 0.05cm 0.06cm 0.07cm 0.08cm
-  border-radius: 0.2cm 0.19cm 0.22cm 0.1cm
-  border-color: ink(0.66) ink(0.53) ink(0.46) ink(0.53)
-
   font-weight: bold
   color: ink(0.66)
 
   cursor: pointer
+
+  border: solid
+  border-width: 0.05cm 0.06cm 0.07cm 0.08cm
+  border-radius: 0.2cm 0.19cm 0.22cm 0.1cm
+  @include ink-border(0.66, 0.53, 0.46, 0.53)
 
   &::before
     content: ""
@@ -213,10 +216,10 @@ label
     right: 0
     bottom: 0
     border: solid
+    transform: rotate(-0.6deg)
     border-width: 0.085cm 0.065cm 0.075cm 0.055cm
     border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
-    border-color: ink(0.6) ink(0.73) ink(0.46) ink(0.6)
-    transform: rotate(-0.6deg)
+    @include ink-border(0.6, 0.73, 0.46, 0.6)
 
   &::after
     content: ""
@@ -226,34 +229,34 @@ label
     right: 0
     bottom: 0
     border: solid black
+    transform: rotate(0.4deg)
     border-width: 0.085cm 0.065cm 0.075cm 0.055cm
     border-radius: 0.29cm 0.1cm 0.24cm 0.17cm
-    border-color: ink(0.73) ink(0.53) ink(0.66) ink(0.53)
-    transform: rotate(0.4deg)
+    @include ink-border(0.73, 0.53, 0.66, 0.53)
 
   &:not(:disabled):hover
     color: ink(0.8)
-    border-color: ink(0.8) ink(0.66) ink(0.6) ink(0.66)
     transform: scale(1.01)
+    @include ink-border(0.8, 0.66, 0.6, 0.66)
     &::before
-      border-color: ink(0.73) ink(0.86) ink(0.53) ink(0.73)
+      @include ink-border(0.73, 0.86, 0.53, 0.73)
     &::after
-      border-color: ink(0.86) ink(0.66) ink(0.8) ink(0.66)
+      @include ink-border(0.86, 0.66, 0.8, 0.66)
 
   &:not(:disabled):active
     color: ink(1)
-    border-color: ink(0.93) ink(0.8) ink(0.73) ink(0.8)
     transform: scale(0.99)
+    @include ink-border(0.93, 0.8, 0.73, 0.8)
     &::before
-      border-color: ink(0.86) ink(1) ink(0.66) ink(0.86)
+      @include ink-border(0.86, 1, 0.66, 0.86)
     &::after
-      border-color: ink(1) ink(0.8) ink(0.93) ink(0.8)
+      @include ink-border(1, 0.8, 0.93, 0.8)
 
   &:disabled
     cursor: not-allowed
     color: ink(0.3)
-    border-color: ink(0.1) ink(0.16) ink(0.08) ink(0.11)
+    @include ink-border(0.1, 0.16, 0.08, 0.11)
     &::before
-      border-color: ink(0.12) ink(0.095) ink(0.06) ink(0.14)
+      @include ink-border(0.12, 0.095, 0.06, 0.14)
     &::after
-      border-color: ink(0.11) ink(0.11) ink(0.12) ink(0.12)
+      @include ink-border(0.11, 0.11, 0.12, 0.12)

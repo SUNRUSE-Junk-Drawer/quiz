@@ -1,3 +1,7 @@
+@mixin desktop
+  @media (min-width: 14cm)
+    @content
+
 *
   font-family: inherit
   background: none
@@ -27,8 +31,10 @@ html
   line-height: 0.75cm
   white-space: pre
   user-select: none
-  background: linear-gradient(to bottom, rgb(221, 221, 255), rgb(255, 255, 221))
-  background-attachment: fixed
+  background: rgb(255, 255, 238)
+  @include desktop
+    background: linear-gradient(to bottom, rgb(221, 221, 255), rgb(255, 255, 221))
+    background-attachment: fixed
 
 ::selection
   color: white
@@ -71,19 +77,33 @@ body > h1
   transform: translateX(-50%)
   line-height: 1.5cm
   font-size: 0.8cm
-  z-index: 1
+  z-index: 2
   background: linear-gradient(to bottom, transparent 0.15cm, rgb(221, 221, 255) 0.17cm, transparent 0.19cm, transparent 0.9cm, rgb(221, 221, 255) 0.92cm, transparent 0.94cm), linear-gradient(to bottom, rgb(255, 255, 238), rgb(245, 245, 245))
   @include card
 
 body
   margin-top: 3.25cm
 
+  &::before
+    z-index: 1
+    position: fixed
+    pointer-events: none
+    content: ""
+    left: 0
+    top: 0
+    right: 0
+    height: 3.25cm
+    background: linear-gradient(to bottom, rgb(255, 255, 238), rgba(255, 255, 238, 0.8), transparent)
+    @include desktop
+      background: linear-gradient(to bottom, rgb(221, 221, 255), rgba(221, 221, 255, 0.8), transparent)
+
 .form, .error
-  margin: 1cm auto
   padding-top: 0.375cm
   background: linear-gradient(to bottom, rgb(255, 255, 238), rgb(238, 238, 255))
-  max-width: 12cm
-  @include card
+  @include desktop
+    margin: 1cm auto
+    max-width: 12cm
+    @include card
 
 .field, .error p
   padding: 0.375cm 0.75cm

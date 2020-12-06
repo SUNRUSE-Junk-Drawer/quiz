@@ -105,6 +105,26 @@ body
   width: 100%
   height: 0.75cm
 
+.image.field, .video.field
+  text-align: center
+
+  img, video
+    object-fit: contain
+    margin-top: -0.25cm
+    max-width: calc(100% - 0.75cm)
+    height: 7.5cm
+    padding: 0.375cm
+    background: linear-gradient(to bottom, rgb(255, 255, 238), rgb(245, 245, 245))
+    @include card
+
+.audio.field
+  height: 1.5cm
+
+  audio
+    margin-top: -0.25cm
+    width: 100%
+    height: 100%
+
 .submit-button
   text-align: center
   position: relative

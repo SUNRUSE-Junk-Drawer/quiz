@@ -9,7 +9,7 @@ window.addEventListener(`load`, () => {
     jsonWebsocketChannel(
       `wss://uuy1wli1f1.execute-api.eu-west-1.amazonaws.com/production`
     ),
-    { formName: `join`, fields: { code: location.hash.slice(1) } },
+    { token: location.hash.slice(1) },
     document.getElementById(`root`) as Element
   );
 });

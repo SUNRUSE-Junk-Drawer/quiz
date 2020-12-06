@@ -17,7 +17,7 @@
     "@babel/preset-env": "7.12.7",
     "@endless-trash/event-handler": "0.0.3",
     "@endless-trash/file-store": "0.0.5",
-    "@endless-trash/immutable-json-type": "0.0.1",
+    "@endless-trash/immutable-json-type": "0.0.2",
     "@endless-trash/key-value-store": "0.0.5",
     "@endless-trash/prompt": "0.0.8",
     "@endless-trash/websocket-host": "0.0.1",

@@ -71,7 +71,7 @@
     "@endless-trash/dynamodb-key-value-store": "0.0.2",
     "@endless-trash/json-websocket-channel": "0.0.3",
     "@endless-trash/s3-file-store": "0.0.1",
-    "aws-sdk": "2.804.0",
+    "aws-sdk": "2.817.0",
     "core-js": "3.8.1",
     "pug": "3.0.0",
     "regenerator-runtime": "0.13.7",

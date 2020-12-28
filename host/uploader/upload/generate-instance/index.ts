@@ -1,3 +1,4 @@
+import { v4 } from "uuid";
 import { Instance } from "../../../types/instance";
 import { Environment } from "../../environment";
 import { PlayerData } from "../player-data";
@@ -15,6 +16,7 @@ export function generateInstance<TVersion>(
     quizKey,
     players: players.map((player) => ({
       displayName: player.displayName,
+      userId: v4(),
       sessionId: null,
       answers: rounds
         .map((round) =>

@@ -72,7 +72,7 @@
     "@endless-trash/json-websocket-channel": "0.0.3",
     "@endless-trash/s3-file-store": "0.0.1",
     "aws-sdk": "2.817.0",
-    "core-js": "3.8.1",
+    "core-js": "3.11.0",
     "pug": "3.0.0",
     "regenerator-runtime": "0.13.7",
     "uuid": "8.3.2",

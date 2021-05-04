@@ -13,8 +13,8 @@
   "license": "MIT",
   "devDependencies": {
     "7zip-bin": "5.0.3",
-    "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
     "@endless-trash/event-handler": "0.0.3",
     "@endless-trash/file-store": "0.0.5",
     "@endless-trash/immutable-json-type": "0.0.2",
